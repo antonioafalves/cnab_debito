@@ -7,13 +7,13 @@ package br.com.orionsoft.cnab.debito.sicoob;
 import br.com.orionsoft.cnab.core.FormatoCampo;
 import br.com.orionsoft.cnab.core.annotation.Campo;
 import br.com.orionsoft.cnab.core.annotation.Registro;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.math.BigDecimal;
 
-/**
- *
- * @author Antonio
- */
 @Registro
+@Data @NoArgsConstructor
 public class Trailler {
     @Campo(formato= FormatoCampo.ALFANUMERICO, tamanho=1)
     private String codigoRegistro = "Z";
@@ -24,28 +24,4 @@ public class Trailler {
     @Campo(formato= FormatoCampo.ALFANUMERICO, tamanho=126)
     private String filler = " ";
 
-    public String getCodigoRegistro() {
-        return codigoRegistro;
-    }
-
-    public Integer getQuantidadeTotalRegistros() {
-        return quantidadeTotalRegistros;
-    }
-
-    public BigDecimal getValorTotalRegistros() {
-        return valorTotalRegistros;
-    }
-
-    public String getFiller() {
-        return filler;
-    }
-
-    public void setQuantidadeTotalRegistros(Integer quantidadeTotalRegistros) {
-        this.quantidadeTotalRegistros = quantidadeTotalRegistros;
-    }
-
-    public void setValorTotalRegistros(BigDecimal valorTotalRegistros) {
-        this.valorTotalRegistros = valorTotalRegistros;
-    }
-    
 }

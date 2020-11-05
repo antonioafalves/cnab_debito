@@ -7,13 +7,13 @@ package br.com.orionsoft.cnab.debito.sicoob;
 import br.com.orionsoft.cnab.core.FormatoCampo;
 import br.com.orionsoft.cnab.core.annotation.Campo;
 import br.com.orionsoft.cnab.core.annotation.Registro;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.util.Calendar;
 
-/**
- *
- * @author Antonio
- */
 @Registro
+@Data @NoArgsConstructor
 public class Header {
     @Campo(formato= FormatoCampo.ALFANUMERICO, tamanho=1)
     private String codigoRegistro = "A";
@@ -38,56 +38,4 @@ public class Header {
     @Campo(formato= FormatoCampo.ALFANUMERICO, tamanho=50)
     private String filler = " ";
 
-    public String getCodigoRegistro() {
-        return codigoRegistro;
-    }
-
-    public String getCodigoRemessa() {
-        return codigoRemessa;
-    }
-
-    public String getCodigoConvenio() {
-        return codigoConvenio;
-    }
-
-    public String getNomeEmpresaConveniada() {
-        return nomeEmpresaConveniada;
-    }
-
-    public String getCodigoBanco() {
-        return codigoBanco;
-    }
-
-    public String getNomeBanco() {
-        return nomeBanco;
-    }
-
-    public Calendar getDataGeracaoArquivo() {
-        return dataGeracaoArquivo;
-    }
-
-    public Integer getNumeroSequencialArquivo() {
-        return numeroSequencialArquivo;
-    }
-
-    public String getVersaoLeiaute() {
-        return versaoLeiaute;
-    }
-
-    public String getIdentificacaoServico() {
-        return identificacaoServico;
-    }
-
-    public String getFiller() {
-        return filler;
-    }
-
-    public void setDataGeracaoArquivo(Calendar dataGeracaoArquivo) {
-        this.dataGeracaoArquivo = dataGeracaoArquivo;
-    }
-
-    public void setNumeroSequencialArquivo(Integer numeroSequencialArquivo) {
-        this.numeroSequencialArquivo = numeroSequencialArquivo;
-    }
-    
 }

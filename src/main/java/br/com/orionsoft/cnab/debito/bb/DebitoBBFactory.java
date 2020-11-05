@@ -4,10 +4,6 @@
  */
 package br.com.orionsoft.cnab.debito.bb;
 
-/**
- *
- * @author Antonio
- */
 public class DebitoBBFactory {
     public static Remessa getRemessa() {
         return new Remessa();

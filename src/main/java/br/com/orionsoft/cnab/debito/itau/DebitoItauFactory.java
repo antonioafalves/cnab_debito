@@ -4,10 +4,6 @@
  */
 package br.com.orionsoft.cnab.debito.itau;
 
-/**
- *
- * @author Antonio
- */
 public class DebitoItauFactory {
     
 }

@@ -9,10 +9,6 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- *
- * @author Antonio
- */
 public class Remessa extends Arquivo {
     private Header header;
     private List<RegistroE> detalhe;

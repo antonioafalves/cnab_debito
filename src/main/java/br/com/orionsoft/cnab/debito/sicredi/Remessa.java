@@ -8,10 +8,6 @@ import br.com.orionsoft.cnab.core.Arquivo;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- *
- * @author Antonio
- */
 public class Remessa extends Arquivo {
     private Header header;
     private List<RegistroE> registroE;

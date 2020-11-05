@@ -8,13 +8,13 @@ import br.com.orionsoft.cnab.core.Arquivo;
 import br.com.orionsoft.cnab.core.FormatoCampo;
 import br.com.orionsoft.cnab.core.annotation.Campo;
 import br.com.orionsoft.cnab.core.annotation.Identificador;
-import org.joda.time.DateMidnight;
-import org.joda.time.Hours;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-/**
- *
- * @author Antonio
- */
+import java.time.LocalDate;
+import java.time.LocalTime;
+
+@Data @NoArgsConstructor
 public class HeaderArquivo extends Arquivo {
     @Campo(formato= FormatoCampo.ALFANUMERICO, tamanho=3)
     private String codigoBanco = "341";
@@ -55,9 +55,9 @@ public class HeaderArquivo extends Arquivo {
     @Campo(formato= FormatoCampo.NUMERICO, tamanho=1)
     private int codigo = 1;
     @Campo(formato= FormatoCampo.DATA_DDMMAAAA, tamanho=8)
-    private DateMidnight dataGeracao;
+    private LocalDate dataGeracao;
     @Campo(formato= FormatoCampo.HORA, tamanho=6)
-    private Hours horaGeracao;
+    private LocalTime horaGeracao;
     @Campo(formato= FormatoCampo.NUMERICO, tamanho=6)
     private int sequencia;
     @Campo(formato= FormatoCampo.ALFANUMERICO, tamanho=3)
@@ -68,162 +68,6 @@ public class HeaderArquivo extends Arquivo {
     private String reservadoBanco = "";
     @Campo(formato= FormatoCampo.ALFANUMERICO, tamanho=49)
     private String brancos8 = "";
-
-    public int getAgencia() {
-        return agencia;
-    }
-
-    public void setAgencia(int agencia) {
-        this.agencia = agencia;
-    }
-
-    public String getBanco() {
-        return banco;
-    }
-
-    public String getBrancos1() {
-        return brancos1;
-    }
-
-    public String getBrancos2() {
-        return brancos2;
-    }
-
-    public void setBrancos2(String brancos2) {
-        this.brancos2 = brancos2;
-    }
-
-    public int getBrancos3() {
-        return brancos3;
-    }
-
-    public void setBrancos3(int brancos3) {
-        this.brancos3 = brancos3;
-    }
-
-    public String getBrancos4() {
-        return brancos4;
-    }
-
-    public int getBrancos5() {
-        return brancos5;
-    }
-
-    public String getBrancos6() {
-        return brancos6;
-    }
-
-    public String getBrancos7() {
-        return brancos7;
-    }
-
-    public String getBrancos8() {
-        return brancos8;
-    }
-
-    public int getCodigo() {
-        return codigo;
-    }
-
-    public void setCodigo(int codigo) {
-        this.codigo = codigo;
-    }
-
-    public String getCodigoBanco() {
-        return codigoBanco;
-    }
-
-    public int getCodigoInscricao() {
-        return codigoInscricao;
-    }
-
-    public void setCodigoInscricao(int codigoInscricao) {
-        this.codigoInscricao = codigoInscricao;
-    }
-
-    public String getCodigoLote() {
-        return codigoLote;
-    }
-
-    public int getConta() {
-        return conta;
-    }
-
-    public void setConta(int conta) {
-        this.conta = conta;
-    }
-
-    public String getConvenio() {
-        return convenio;
-    }
-
-    public void setConvenio(String convenio) {
-        this.convenio = convenio;
-    }
-
-    public int getDac() {
-        return dac;
-    }
-
-    public void setDac(int dac) {
-        this.dac = dac;
-    }
-
-    public DateMidnight getDataGeracao() {
-        return dataGeracao;
-    }
-
-    public void setDataGeracao(DateMidnight dataGeracao) {
-        this.dataGeracao = dataGeracao;
-    }
-
-    public Hours getHoraGeracao() {
-        return horaGeracao;
-    }
-
-    public void setHoraGeracao(Hours horaGeracao) {
-        this.horaGeracao = horaGeracao;
-    }
-
-    public String getLayout() {
-        return layout;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public String getNumeroInscricao() {
-        return numeroInscricao;
-    }
-
-    public void setNumeroInscricao(String numeroInscricao) {
-        this.numeroInscricao = numeroInscricao;
-    }
-
-    public String getReservadoBanco() {
-        return reservadoBanco;
-    }
-
-    public int getSequencia() {
-        return sequencia;
-    }
-
-    public void setSequencia(int sequencia) {
-        this.sequencia = sequencia;
-    }
-
-    public String getTipoRegistro() {
-        return tipoRegistro;
-    }
-
-    public int getUnidadeDensidade() {
-        return unidadeDensidade;
-    }
 
     protected enum CodigoInscricao {
         CPF(1),

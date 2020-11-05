@@ -8,13 +8,13 @@ import br.com.orionsoft.cnab.core.FormatoCampo;
 import br.com.orionsoft.cnab.core.annotation.Campo;
 import br.com.orionsoft.cnab.core.annotation.Identificador;
 import br.com.orionsoft.cnab.core.annotation.Registro;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.util.Calendar;
 
-/**
- *
- * @author Antonio
- */
 @Registro
+@Data @NoArgsConstructor
 public class Header {
     @Identificador
     @Campo(formato= FormatoCampo.ALFANUMERICO, tamanho=1)
@@ -53,70 +53,6 @@ public class Header {
         public int getValue() {
             return value;
         }
-    }
-
-    public String getCodigoBanco() {
-        return codigoBanco;
-    }
-
-    public String getCodigoRegistro() {
-        return codigoRegistro;
-    }
-
-    public String getIdentificacaoServico() {
-        return identificacaoServico;
-    }
-
-    public String getNomeBanco() {
-        return nomeBanco;
-    }
-
-    public String getReservado() {
-        return reservado;
-    }
-
-    public String getVersaoLayout() {
-        return versaoLayout;
-    }
-            
-    public String getCodigoConvenio() {
-        return codigoConvenio;
-    }
-
-    public void setCodigoConvenio(String codigoConvenio) {
-        this.codigoConvenio = codigoConvenio;
-    }
-
-    public int getCodigoRemessa() {
-        return codigoRemessa;
-    }
-
-    public void setCodigoRemessa(int codigoRemessa) {
-        this.codigoRemessa = codigoRemessa;
-    }
-
-    public Calendar getDataGeracao() {
-        return dataGeracao;
-    }
-
-    public void setDataGeracao(Calendar dataGeracao) {
-        this.dataGeracao = dataGeracao;
-    }
-
-    public String getNomeEmpresa() {
-        return nomeEmpresa;
-    }
-
-    public void setNomeEmpresa(String nomeEmpresa) {
-        this.nomeEmpresa = nomeEmpresa;
-    }
-
-    public int getNumeroSequencialArquivo() {
-        return numeroSequencialArquivo;
-    }
-
-    public void setNumeroSequencialArquivo(int numeroSequencialArquivo) {
-        this.numeroSequencialArquivo = numeroSequencialArquivo;
     }
 
 }

@@ -8,10 +8,6 @@ import br.com.orionsoft.cnab.core.Arquivo;
 import br.com.orionsoft.cnab.core.FormatoCampo;
 import br.com.orionsoft.cnab.core.annotation.Campo;
 
-/**
- *
- * @author Antonio
- */
 public class HeaderLote extends Arquivo {
     @Campo(formato= FormatoCampo.ALFANUMERICO, tamanho=3)
     private String codigoBanco = "341";
