@@ -37,5 +37,4 @@ public class Header {
     private String identificacaoServico = "DEBITO AUTOMATICO";
     @Campo(formato= FormatoCampo.ALFANUMERICO, tamanho=50)
     private String filler = " ";
-
 }

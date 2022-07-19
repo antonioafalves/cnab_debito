@@ -38,5 +38,4 @@ public class RegistroE {
     private String filler2 = " ";
     @Campo(formato= FormatoCampo.ALFANUMERICO, tamanho=1)
     private String codigoMovimento = "0";
-
 }

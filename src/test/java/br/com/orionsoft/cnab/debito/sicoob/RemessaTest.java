@@ -4,22 +4,19 @@
  */
 package br.com.orionsoft.cnab.debito.sicoob;
 
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
+import org.junit.Test;
 
 import java.io.PrintWriter;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.Calendar;
 
-//@SpringBootTest
 public class RemessaTest {
     
     public RemessaTest() {
     }
     
-//    @Test
+    @Test
     public void testGravar() throws Exception {
         int count = 2;
         BigDecimal total = new BigDecimal(0);
@@ -29,7 +26,7 @@ public class RemessaTest {
         h.setDataGeracaoArquivo(Calendar.getInstance());
         h.setNumeroSequencialArquivo(1);
 
-        BigDecimal valor = new BigDecimal(31.27);
+        BigDecimal valor = BigDecimal.valueOf(31.27);
         RegistroE e = new RegistroE();
         e.setAgenciaDebito("4340");
         e.setCodigoClienteEmpresa("098020300000003");
@@ -41,7 +38,7 @@ public class RemessaTest {
         count++;
         total = total.add(valor);
         
-        valor = new BigDecimal(31.27);
+        valor = BigDecimal.valueOf(31.27);
         e = new RegistroE();
         e.setAgenciaDebito("4340");
         e.setCodigoClienteEmpresa("098020300000004");
@@ -60,6 +57,5 @@ public class RemessaTest {
         r.setHeader(h);
         r.setTrailler(t);
         r.gravar(new PrintWriter("remessa756.txt"));
-        Assertions.assertTrue(true);
     }
 }

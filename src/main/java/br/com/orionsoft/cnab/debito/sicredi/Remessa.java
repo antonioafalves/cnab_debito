@@ -5,6 +5,7 @@
 package br.com.orionsoft.cnab.debito.sicredi;
 
 import br.com.orionsoft.cnab.core.Arquivo;
+
 import java.util.ArrayList;
 import java.util.List;
 

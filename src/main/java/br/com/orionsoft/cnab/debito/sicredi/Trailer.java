@@ -23,5 +23,4 @@ public class Trailer {
     private BigDecimal valorTotalRegistros;
     @Campo(formato= FormatoCampo.ALFANUMERICO, tamanho=126)
     private String filler = " ";
-
 }
