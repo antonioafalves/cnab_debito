@@ -1,7 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package br.com.orionsoft.cnab.debito.sicoob;
 
 import br.com.orionsoft.cnab.core.FormatoCampo;
@@ -10,7 +6,7 @@ import br.com.orionsoft.cnab.core.annotation.Registro;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.Calendar;
+import java.time.LocalDate;
 
 @Registro
 @Data @NoArgsConstructor
@@ -28,7 +24,7 @@ public class Header {
     @Campo(formato= FormatoCampo.ALFANUMERICO, tamanho=20)
     private String nomeBanco = "SICOOB";
     @Campo(formato= FormatoCampo.DATA_AAAAMMDD, tamanho=8)
-    private Calendar dataGeracaoArquivo;
+    private LocalDate dataGeracaoArquivo;
     @Campo(formato= FormatoCampo.NUMERICO, tamanho=6)
     private Integer numeroSequencialArquivo;
     @Campo(formato= FormatoCampo.ALFANUMERICO, tamanho=2)

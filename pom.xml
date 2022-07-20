@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>br.com.orionsoft</groupId>
     <artifactId>CNAB_debito</artifactId>
-    <version>1.1.1</version>
+    <version>1.2.0</version>
     <name>CNAB_debito</name>
     <description>CNAB Debito</description>
     <properties>
@@ -27,7 +27,7 @@
         <dependency>
             <groupId>br.com.orionsoft</groupId>
             <artifactId>CNAB_core</artifactId>
-            <version>1.1.1</version>
+            <version>1.2.0</version>
         </dependency>
     </dependencies>
 </project>

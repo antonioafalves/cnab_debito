@@ -1,7 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package br.com.orionsoft.cnab.debito.sicoob;
 
 import org.junit.Test;
@@ -13,9 +9,6 @@ import java.util.Calendar;
 
 public class RemessaTest {
     
-    public RemessaTest() {
-    }
-    
     @Test
     public void testGravar() throws Exception {
         int count = 2;
@@ -23,7 +16,7 @@ public class RemessaTest {
         Remessa r = new Remessa();
         
         Header h = new Header();
-        h.setDataGeracaoArquivo(Calendar.getInstance());
+        h.setDataGeracaoArquivo(LocalDate.now());
         h.setNumeroSequencialArquivo(1);
 
         BigDecimal valor = BigDecimal.valueOf(31.27);
@@ -56,6 +49,6 @@ public class RemessaTest {
                 
         r.setHeader(h);
         r.setTrailler(t);
-        r.gravar(new PrintWriter("remessa756.txt"));
+        r.gravar(new PrintWriter("temp/remessa756.txt"));
     }
 }

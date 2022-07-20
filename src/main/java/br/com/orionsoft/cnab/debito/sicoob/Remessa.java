@@ -1,10 +1,7 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package br.com.orionsoft.cnab.debito.sicoob;
 
 import br.com.orionsoft.cnab.core.Arquivo;
+
 import java.util.ArrayList;
 import java.util.List;
 
