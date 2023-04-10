@@ -1,14 +1,15 @@
 package br.com.orionsoft.cnab.debito.sicoob;
 
-import br.com.orionsoft.cnab.core.Arquivo;
+import br.com.orionsoft.cnab.core.File;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Remessa extends Arquivo {
+@SuppressWarnings("unused")
+public class Remessa extends File {
     private Header header;
     private List<RegistroE> registroE;
-    private Trailler trailler;
+    private Trailer trailer;
 
     public Header getHeader() {
         return header;
@@ -32,12 +33,12 @@ public class Remessa extends Arquivo {
         registroE.add(e);
     }
     
-    public Trailler getTrailler() {
-        return trailler;
+    public Trailer getTrailer() {
+        return trailer;
     }
 
-    public void setTrailler(Trailler trailler) {
-        this.trailler = trailler;
+    public void setTrailer(Trailer trailer) {
+        this.trailer = trailer;
     }
     
 }

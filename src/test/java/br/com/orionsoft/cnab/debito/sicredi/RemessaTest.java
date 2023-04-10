@@ -5,7 +5,6 @@ import org.junit.Test;
 import java.io.PrintWriter;
 import java.math.BigDecimal;
 import java.time.LocalDate;
-import java.util.Calendar;
 
 public class RemessaTest {
     
@@ -49,6 +48,6 @@ public class RemessaTest {
                 
         r.setHeader(h);
         r.setTrailer(t);
-        r.gravar(new PrintWriter("temp/remessa748.txt"));
+        r.save(new PrintWriter("temp/remessa748.txt"));
     }
 }

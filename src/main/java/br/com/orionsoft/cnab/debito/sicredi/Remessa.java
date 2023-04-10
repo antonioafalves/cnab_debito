@@ -1,11 +1,12 @@
 package br.com.orionsoft.cnab.debito.sicredi;
 
-import br.com.orionsoft.cnab.core.Arquivo;
+import br.com.orionsoft.cnab.core.File;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Remessa extends Arquivo {
+@SuppressWarnings("unused")
+public class Remessa extends File {
     private Header header;
     private List<RegistroE> registroE;
     private Trailer trailer;

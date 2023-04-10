@@ -1,36 +1,36 @@
 package br.com.orionsoft.cnab.debito.sicredi;
 
-import br.com.orionsoft.cnab.core.FormatoCampo;
-import br.com.orionsoft.cnab.core.annotation.Campo;
-import br.com.orionsoft.cnab.core.annotation.Registro;
+import br.com.orionsoft.cnab.core.Pattern;
+import br.com.orionsoft.cnab.core.annotation.Field;
+import br.com.orionsoft.cnab.core.annotation.Record;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
 
-@Registro
+@Record
 @Data @NoArgsConstructor
 public class Header {
-    @Campo(formato= FormatoCampo.ALFANUMERICO, tamanho=1)
+    @Field(pattern= Pattern.ALPHANUMERIC, size=1)
     private String codigoRegistro = "A";
-    @Campo(formato= FormatoCampo.ALFANUMERICO, tamanho=1)
+    @Field(pattern= Pattern.ALPHANUMERIC, size=1)
     private String codigoRemessa = "1";
-    @Campo(formato= FormatoCampo.ALFANUMERICO, tamanho=20)
+    @Field(pattern= Pattern.ALPHANUMERIC, size=20)
     private String codigoConvenio = "EX";
-    @Campo(formato= FormatoCampo.ALFANUMERICO, tamanho=20)
+    @Field(pattern= Pattern.ALPHANUMERIC, size=20)
     private String nomeEmpresaConveniada = "UNIODONTO DE MARINGA";
-    @Campo(formato= FormatoCampo.ALFANUMERICO, tamanho=3)
+    @Field(pattern= Pattern.ALPHANUMERIC, size=3)
     private String codigoBanco = "748";
-    @Campo(formato= FormatoCampo.ALFANUMERICO, tamanho=20)
+    @Field(pattern= Pattern.ALPHANUMERIC, size=20)
     private String nomeBanco = "SICREDI CENTRAL";
-    @Campo(formato= FormatoCampo.DATA_AAAAMMDD, tamanho=8)
+    @Field(pattern= Pattern.DATE_AAAAMMDD, size=8)
     private LocalDate dataGeracaoArquivo;
-    @Campo(formato= FormatoCampo.NUMERICO, tamanho=6)
+    @Field(pattern= Pattern.NUMERIC, size=6)
     private Integer numeroSequencialArquivo;
-    @Campo(formato= FormatoCampo.ALFANUMERICO, tamanho=2)
+    @Field(pattern= Pattern.ALPHANUMERIC, size=2)
     private String versaoLeiaute = "04";
-    @Campo(formato= FormatoCampo.ALFANUMERICO, tamanho=19)
+    @Field(pattern= Pattern.ALPHANUMERIC, size=19)
     private String identificacaoServico = "DEBITO AUTOMATICO";
-    @Campo(formato= FormatoCampo.ALFANUMERICO, tamanho=50)
+    @Field(pattern= Pattern.ALPHANUMERIC, size=50)
     private String filler = " ";
 }

@@ -5,7 +5,6 @@ import org.junit.Test;
 import java.io.PrintWriter;
 import java.math.BigDecimal;
 import java.time.LocalDate;
-import java.util.Calendar;
 
 public class RemessaTest {
     
@@ -43,12 +42,12 @@ public class RemessaTest {
         count++;
         total = total.add(valor);
         
-        Trailler t = new Trailler();
+        Trailer t = new Trailer();
         t.setQuantidadeTotalRegistros(count);
         t.setValorTotalRegistros(total);
                 
         r.setHeader(h);
-        r.setTrailler(t);
-        r.gravar(new PrintWriter("temp/remessa756.txt"));
+        r.setTrailer(t);
+        r.save(new PrintWriter("temp/remessa756.txt"));
     }
 }

@@ -1,22 +1,22 @@
 package br.com.orionsoft.cnab.debito.sicredi;
 
-import br.com.orionsoft.cnab.core.FormatoCampo;
-import br.com.orionsoft.cnab.core.annotation.Campo;
-import br.com.orionsoft.cnab.core.annotation.Registro;
+import br.com.orionsoft.cnab.core.Pattern;
+import br.com.orionsoft.cnab.core.annotation.Field;
+import br.com.orionsoft.cnab.core.annotation.Record;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 
-@Registro
+@Record
 @Data @NoArgsConstructor
 public class Trailer {
-    @Campo(formato= FormatoCampo.ALFANUMERICO, tamanho=1)
+    @Field(pattern= Pattern.ALPHANUMERIC, size=1)
     private String codigoRegistro = "Z";
-    @Campo(formato= FormatoCampo.NUMERICO, tamanho=6)
+    @Field(pattern= Pattern.NUMERIC, size=6)
     private Integer quantidadeTotalRegistros;
-    @Campo(formato= FormatoCampo.DECIMAL, tamanho=17)
+    @Field(pattern= Pattern.DECIMAL, size=17)
     private BigDecimal valorTotalRegistros;
-    @Campo(formato= FormatoCampo.ALFANUMERICO, tamanho=126)
+    @Field(pattern= Pattern.ALPHANUMERIC, size=126)
     private String filler = " ";
 }
